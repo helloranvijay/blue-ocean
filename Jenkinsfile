@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean source:jar package'
+        sh 'echo "Build Ready"'
       }
     }
     stage('Browser Tests') {

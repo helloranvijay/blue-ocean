@@ -11,19 +11,19 @@ pipeline {
         stage('Browser Tests') {
           steps {
             sh 'echo "Setting up Selenium Environment"'
-            sh 'ping -c 5 localhost'
+            sh 'ping localhost'
           }
         }
         stage('Chrome') {
           steps {
             sh 'echo "Chrome Test"'
-            sh 'ping -c 5 localhost'
+            sh 'ping localhost'
           }
         }
         stage('Firefox') {
           steps {
             sh 'echo "Firefox Test"'
-            sh 'ping -c 5 localhost'
+            sh 'ping localhost'
           }
         }
       }
@@ -36,7 +36,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'echo "Deployment in progress"'
-        sh 'ping -c 5 localhost'
+        sh 'ping localhost'
         sh 'echo "Deployment Completed"'
       }
     }
